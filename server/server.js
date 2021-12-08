@@ -2,15 +2,13 @@ const express = require('express');
 const cors = require('cors');
 
 const server = express();
-const router = express.Router();
 server.use(cors());
 server.use(express.json());
-const postController = require('./controllers/posts')
 
+const postsRoutes = require('./routes/routes')
 
-server.get('/', (req, res) => res.send('Hello, friend'))
+server.use('/', postsRoutes)
 
-router.get('/:id', postController.show);
+// server.get('/', (req, res) => res.send('Hello, friend.'))
 
-module.exports = router;
 module.exports = server

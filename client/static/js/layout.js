@@ -1,2 +1,2 @@
-const publish = document.getElementById('publishMessage')
-publish.addEventListener('submit', postPost())
+const publish = document.querySelector('#writeAPost')
+publish.onsubmit = postPost
