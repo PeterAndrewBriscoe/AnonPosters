@@ -5,11 +5,12 @@ const server = express();
 const router = express.Router();
 server.use(cors());
 server.use(express.json());
+const postController = require('./controllers/posts')
 
 
-server.get('/', (req, res) => res.send('Hello there, old friend'))
+server.get('/', (req, res) => res.send('Hello, friend'))
 
-router.get('/:id', authorsController.show);
+router.get('/:id', postController.show);
 
 module.exports = router;
 module.exports = server
