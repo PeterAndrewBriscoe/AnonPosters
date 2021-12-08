@@ -5,7 +5,7 @@ module.exports = class Post {
         this.id = data.id;
         this.title = data.title;
         this.pseudonym = data.pseudonym;
-        this.body = data.body;
+        this.message = data.message;
     };
     
     static get all(){ 
@@ -36,8 +36,8 @@ module.exports = class Post {
     static create(postData){
         return new Promise (async (resolve, reject) => {
             try {
-                let result = await db.query(`INSERT INTO posts (title, pseudonym, body)
-                                                VALUES ($1, $2, $3) RETURNING *;`, [ postData.title, postData.pseudonym, postData.body])
+                let result = await db.query(`INSERT INTO posts (title, pseudonym, message)
+                                                VALUES ($1, $2, $3) RETURNING *;`, [ postData.title, postData.pseudonym, postData.message])
                 let post = new Post(result.rows[0])
                 resolve (post);
             } catch (err) {
