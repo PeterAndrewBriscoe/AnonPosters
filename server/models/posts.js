@@ -38,7 +38,7 @@ module.exports = class Post {
             try {
                 const { title, pseudonym, body} = postData;
                 let result = await db.query(`INSERT INTO posts (title, pseudonym, body)
-                                                VALUES ($1, $2, $3) RETURNING *;`, [ postData.title, postData.pseudonym, postData.body])
+                                                VALUES ($1, $2, $3) RETURNING id;`, [ title, pseudonym, body])
                 resolve (result.rows[0]);
             } catch (err) {
                 reject('Post could not be created');
