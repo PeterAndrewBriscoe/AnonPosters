@@ -9,6 +9,6 @@ const postsRoutes = require('./routes/routes')
 
 server.use('/', postsRoutes)
 
-server.get('/', (req, res) => res.send('Hello, friend.'))
+// server.get('/', (req, res) => res.send('Hello, friend.'))
 
 module.exports = server
