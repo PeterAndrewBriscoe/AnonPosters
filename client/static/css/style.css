@@ -6,6 +6,29 @@ padding: 0;
 
 #styleOptions {
     background-color: #8f8f8f;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+
+}
+
+#styleOptions > * {
+    border: none;
+    color: #e0e0e0;
+    background-color: #8f8f8f;
+    padding-right: 20px;
+}
+
+#lightMode:hover {
+    color: #ffffff;
+}
+
+#darkMode:hover {
+    color: #ffffff;
+}
+
+#highContrast:hover {
+    color: #ffffff;
 }
 
 form {
