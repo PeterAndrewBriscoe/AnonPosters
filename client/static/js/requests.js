@@ -10,6 +10,7 @@ async function getPost(id) {
 
 async function postPost(e) {
     e.preventDefault()
+    console.log('Hello there')
     try {
         const options = {
             method: 'POST',
