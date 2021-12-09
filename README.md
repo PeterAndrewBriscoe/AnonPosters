@@ -18,8 +18,8 @@ Be happy
 - Then we figured out routing and how to connect the two
 
 ## Biggest wins and challennges
--Big win of getting it to work
--Big challenge of getting it to work
+- Big win of getting it to work
+- Big challenge of getting it to work
 
 ## Bugs
 - Cannot access post again after server has restarted 
