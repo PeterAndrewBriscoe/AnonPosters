@@ -4,10 +4,10 @@ CREATE TABLE posts (
     id serial PRIMARY KEY,
     title VARCHAR(100)NOT NULL,
     pseudonym VARCHAR(20) NOT NULL,
-    body VARCHAR(255) NOT NULL
+    message VARCHAR(255) NOT NULL
 );
 
-INSERT INTO posts (title, pseudonym, body) 
+INSERT INTO posts (title, pseudonym, message) 
 VALUES
 (
     'Thoughts on life', 
